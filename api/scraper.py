@@ -68,14 +68,27 @@ async def scrape_one(page, asin: str) -> dict:
         if not_found:
             return {"status": "not_found", "asin": asin}
 
+        # Debug: Save screenshot to see what page we got
+        try:
+            import base64
+            screenshot = await page.screenshot()
+            screenshot_b64 = base64.b64encode(screenshot).decode()
+            print(f"[{asin}] Screenshot saved (first 100 chars): {screenshot_b64[:100]}")
+        except Exception as e:
+            print(f"[{asin}] Screenshot failed: {e}")
+
         # Check for CAPTCHA
         page_content = await page.content()
         if "captcha" in page_content.lower() or "robot" in page_content.lower():
-            print(f"[{asin}] CAPTCHA or bot detection page detected!")
-            # Try to continue anyway
+            print(f"[{asin}] ⚠️  CAPTCHA or bot detection page detected!")
+            print(f"[{asin}] Page title: {await page.title()}")
+            # Save HTML for debugging
+            print(f"[{asin}] Page HTML (first 500 chars): {page_content[:500]}")
 
         # Debug: Log what we're trying to scrape
         print(f"[{asin}] Page loaded, starting extraction...")
+        print(f"[{asin}] Page URL: {page.url}")
+        print(f"[{asin}] Page title: {await page.title()}")
 
         # Extract product data
         result = {
