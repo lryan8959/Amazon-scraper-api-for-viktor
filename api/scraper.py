@@ -60,13 +60,22 @@ async def scrape_one(page, asin: str) -> dict:
     url = f"https://www.amazon.com/dp/{asin}"
 
     try:
-        await page.goto(url, wait_until="domcontentloaded", timeout=20000)
-        await asyncio.sleep(2)
+        await page.goto(url, wait_until="networkidle", timeout=30000)
+        await asyncio.sleep(3)  # Give more time for page to fully load
 
         # Check if product exists
         not_found = await page.query_selector('text="Sorry, we couldn\'t find that page"')
         if not_found:
             return {"status": "not_found", "asin": asin}
+
+        # Check for CAPTCHA
+        page_content = await page.content()
+        if "captcha" in page_content.lower() or "robot" in page_content.lower():
+            print(f"[{asin}] CAPTCHA or bot detection page detected!")
+            # Try to continue anyway
+
+        # Debug: Log what we're trying to scrape
+        print(f"[{asin}] Page loaded, starting extraction...")
 
         # Extract product data
         result = {
@@ -80,8 +89,11 @@ async def scrape_one(page, asin: str) -> dict:
             title_el = await page.query_selector("#productTitle")
             if title_el:
                 result["title"] = (await title_el.inner_text()).strip()
-        except:
-            pass
+                print(f"[{asin}] ✓ Title found")
+            else:
+                print(f"[{asin}] ✗ Title not found")
+        except Exception as e:
+            print(f"[{asin}] ✗ Title error: {e}")
 
         # Price
         try:
