@@ -101,6 +101,18 @@ async def new_session():
         {"name": "session-id", "value": "147-8974563-1234567", "domain": ".amazon.com", "path": "/"},
     ])
 
+    # Apply playwright-stealth if available
+    try:
+        from playwright_stealth import stealth_async
+        page_temp = await ctx.new_page()
+        await stealth_async(page_temp)
+        await page_temp.close()
+        print("✓ playwright-stealth applied")
+    except ImportError:
+        print("⚠ playwright-stealth not available, using manual stealth")
+    except Exception as e:
+        print(f"⚠ playwright-stealth error: {e}")
+
     # Enhanced anti-detection script
     await ctx.add_init_script("""
         // Override webdriver property
