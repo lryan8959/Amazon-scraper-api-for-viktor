@@ -57,7 +57,10 @@ async def launch_browser():
         "args": [
             "--disable-blink-features=AutomationControlled",
             "--no-sandbox",
-            "--disable-dev-shm-usage"
+            "--disable-dev-shm-usage",
+            "--disable-features=IsolateOrigins,site-per-process",
+            "--disable-site-isolation-trials",
+            "--disable-web-security",
         ]
     }
     if scraper.PROXY:
@@ -79,17 +82,67 @@ async def new_session():
         locale="en-US",
         timezone_id="America/New_York",
         viewport={"width": 1366, "height": 900},
-        extra_http_headers={"Accept-Language": "en-US,en;q=0.9"},
+        extra_http_headers={
+            "Accept-Language": "en-US,en;q=0.9",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+            "Accept-Encoding": "gzip, deflate, br",
+            "DNT": "1",
+            "Connection": "keep-alive",
+            "Upgrade-Insecure-Requests": "1",
+            "Sec-Fetch-Dest": "document",
+            "Sec-Fetch-Mode": "navigate",
+            "Sec-Fetch-Site": "none",
+        },
     )
 
     await ctx.add_cookies([
         {"name": "i18n-prefs", "value": "USD", "domain": ".amazon.com", "path": "/"},
         {"name": "lc-main", "value": "en_US", "domain": ".amazon.com", "path": "/"},
+        {"name": "session-id", "value": "147-8974563-1234567", "domain": ".amazon.com", "path": "/"},
     ])
 
-    await ctx.add_init_script(
-        "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
-    )
+    # Enhanced anti-detection script
+    await ctx.add_init_script("""
+        // Override webdriver property
+        Object.defineProperty(navigator, 'webdriver', {
+            get: () => false,
+        });
+
+        // Mock plugins to look like a real browser
+        Object.defineProperty(navigator, 'plugins', {
+            get: () => [1, 2, 3, 4, 5],
+        });
+
+        // Mock languages
+        Object.defineProperty(navigator, 'languages', {
+            get: () => ['en-US', 'en'],
+        });
+
+        // Add chrome object
+        window.chrome = {
+            runtime: {},
+        };
+
+        // Mock permissions query
+        const originalQuery = window.navigator.permissions.query;
+        window.navigator.permissions.query = (parameters) => (
+            parameters.name === 'notifications' ?
+                Promise.resolve({ state: Notification.permission }) :
+                originalQuery(parameters)
+        );
+
+        // Override toString to hide modifications
+        const getParameter = WebGLRenderingContext.prototype.getParameter;
+        WebGLRenderingContext.prototype.getParameter = function(parameter) {
+            if (parameter === 37445) {
+                return 'Intel Inc.';
+            }
+            if (parameter === 37446) {
+                return 'Intel Iris OpenGL Engine';
+            }
+            return getParameter.call(this, parameter);
+        };
+    """)
 
     S.context = ctx
     S.page = await ctx.new_page()
