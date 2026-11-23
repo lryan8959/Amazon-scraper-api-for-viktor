@@ -26,4 +26,5 @@ ENV PYTHONUNBUFFERED=1
 ENV API_KEYS=demo-key-12345
 
 # Run the application
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
+# Use Railway's PORT environment variable
+CMD uvicorn app:app --host 0.0.0.0 --port ${PORT:-8000}
