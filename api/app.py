@@ -14,6 +14,7 @@ from pydantic import BaseModel
 from playwright.async_api import async_playwright
 
 import scraper
+import scraper_requests
 
 # Configuration
 API_KEYS = {k.strip() for k in os.getenv("API_KEYS", "demo-key-12345").split(",") if k.strip()}
@@ -234,6 +235,21 @@ async def scrape_asin(asin: str, fresh: bool = False) -> dict:
         last_err = "unknown error"
         record = None
 
+        # STRATEGY 1: Try requests library first (faster, no browser, sometimes works better)
+        print(f"[{asin}] Trying requests-based scraper first...")
+        try:
+            record = await asyncio.to_thread(scraper_requests.scrape_with_requests, asin)
+            if record and record.get("status") == "ok" and record.get("title"):
+                print(f"[{asin}] ✓ Success with requests library!")
+                CACHE[asin] = (time.time(), record)
+                return {**record, "cached": False, "method": "requests"}
+            else:
+                print(f"[{asin}] ✗ Requests library failed or got blocked")
+        except Exception as e:
+            print(f"[{asin}] ✗ Requests library error: {e}")
+
+        # STRATEGY 2: Fall back to Playwright browser automation
+        print(f"[{asin}] Falling back to Playwright browser...")
         for attempt in range(scraper.MAX_RETRIES + 1):
             try:
                 if S.page is None or S.dirty:
