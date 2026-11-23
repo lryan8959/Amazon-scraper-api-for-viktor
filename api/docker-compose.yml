@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - API_KEYS=${API_KEYS:-demo-key-12345}
+      - CACHE_TTL=${CACHE_TTL:-3600}
+      - MAX_BATCH=${MAX_BATCH:-5}
+      - REQUEST_TIMEOUT=${REQUEST_TIMEOUT:-85}
+      - US_ZIP=${US_ZIP:-10001}
+      - REQUIRE_US_ZIP=${REQUIRE_US_ZIP:-0}
+      - MAX_RETRIES=${MAX_RETRIES:-2}
+    volumes:
+      - .:/app
+    restart: unless-stopped
+    mem_limit: 2g
+    cpus: 2

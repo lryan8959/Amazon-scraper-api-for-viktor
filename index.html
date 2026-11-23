@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cravealicious | Brownies, Cakes & Cupcakes in Bradford</title>
+<meta name="description" content="Cravealicious bakes homemade halal brownies, cakes, cupcakes, desserts and drinks to order in Bradford. Boxes from £4. Collection and delivery. Order on WhatsApp: 07999 660309.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Bakery","name":"Cravealicious","slogan":"Fuel your day the crunchy way","telephone":"+447999660309","address":{"@type":"PostalAddress","addressLocality":"Bradford","postalCode":"BD5","addressCountry":"GB"},"sameAs":["https://www.instagram.com/cravealicious1/","https://www.tiktok.com/@cravealicious"]}</script>
+<meta property="og:title" content="Cravealicious | Brownies, Cakes & Cupcakes">
+<meta property="og:description" content="Fuel your day the crunchy way. Baked to order in Bradford.">
+<meta property="og:image" content="assets/img/brownies-box.jpg">
+<link rel="icon" href="assets/img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&family=Archivo+Black&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F7F3EA;--cocoa:#4A2616;--ink:#1E110B;--acc:#F0A94F;--mute:#7A6455;--ease:cubic-bezier(.2,.7,.2,1);--hv:"Archivo Black","Arial Black",Impact,sans-serif;--tx:"Archivo",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden}
+[id]{scroll-margin-top:80px}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.intro>*,.panel>*,.fg>*{min-width:0}
+body{background:var(--paper);color:var(--cocoa);font:400 18px/1.5 var(--tx);overflow-x:hidden}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--hv);font-weight:400;text-transform:uppercase;line-height:.95;letter-spacing:-.02em;overflow-wrap:break-word}
+.wrap{max-width:1320px;margin:0 auto;padding:0 32px}
+svg.dd{width:64px;height:64px;color:var(--ink);fill:var(--paper)}
+.round{display:grid;place-items:center;width:150px;height:150px;border-radius:50%;background:var(--acc);color:var(--ink);font:400 17px/1 var(--hv);letter-spacing:.04em;text-transform:uppercase;transform:rotate(-18deg);transition:transform .6s var(--ease)}
+.round:hover{transform:rotate(0) scale(1.08)}
+.pill{display:inline-block;padding:15px 30px;border-radius:999px;background:var(--acc);color:var(--ink);font:700 16px var(--tx);text-transform:uppercase;letter-spacing:.02em;transition:transform .4s var(--ease),background .4s}
+.pill:hover{transform:translateY(-3px);background:#fff}
+/* nav */
+nav{position:fixed;inset:0 0 auto;z-index:50;color:#fff;transition:background .4s,color .4s,box-shadow .4s}
+nav.s{background:#fff;color:var(--ink);box-shadow:0 1px 0 rgba(0,0,0,.06)}
+nav .wrap{display:flex;align-items:center;gap:48px;height:78px;max-width:none;padding:0 48px}
+.brand{flex-shrink:0;white-space:nowrap;font:400 26px var(--hv);letter-spacing:-.01em;text-transform:uppercase}
+nav ul{display:flex;gap:52px;list-style:none;padding:0;margin-right:auto;font:700 17px var(--tx);text-transform:uppercase}
+nav ul a{position:relative;white-space:nowrap}
+nav ul a:after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:100%;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+nav ul a:hover:after{transform:scaleX(1)}
+nav .tel{font:700 16px var(--tx);white-space:nowrap}
+.burger{display:none;width:44px;height:44px;border:0;background:none;color:inherit;cursor:pointer;position:relative;margin-right:-8px}
+.burger i{position:absolute;left:9px;width:26px;height:3px;border-radius:2px;background:currentColor;transition:transform .4s var(--ease),top .4s var(--ease)}
+.burger i:nth-child(1){top:16px}.burger i:nth-child(2){top:26px}
+nav.o .burger i:nth-child(1){top:21px;transform:rotate(45deg)}nav.o .burger i:nth-child(2){top:21px;transform:rotate(-45deg)}
+nav.o .burger{opacity:0}
+nav.o{background:transparent!important;color:var(--paper)!important;box-shadow:none!important}
+.scrim{position:fixed;inset:0;z-index:55;background:rgba(30,17,11,.5);backdrop-filter:blur(2px);opacity:0;visibility:hidden;transition:opacity .45s var(--ease),visibility 0s .45s}
+.scrim.o{opacity:1;visibility:visible;transition:opacity .45s var(--ease)}
+.drawer{position:fixed;top:0;bottom:0;left:0;width:min(84vw,400px);z-index:60;background:var(--paper);color:var(--cocoa);display:flex;flex-direction:column;overflow-y:auto;overscroll-behavior:contain;transform:translateX(-102%);visibility:hidden;transition:transform .55s var(--ease),visibility 0s .55s;box-shadow:12px 0 40px rgba(30,17,11,.25)}
+.drawer.o{transform:none;visibility:visible;transition:transform .55s var(--ease)}
+.dh{display:flex;align-items:center;justify-content:space-between;background:#EDE0CC;padding:0 22px 0 28px;min-height:72px;font:500 17px var(--tx);letter-spacing:.32em;text-transform:uppercase;flex:none}
+.dh button{background:none;border:0;color:inherit;font-size:30px;line-height:1;cursor:pointer;width:44px;height:44px;margin-right:-8px}
+.drawer ul{list-style:none;padding:0}
+.drawer li>a,.drawer li>button{display:flex;align-items:center;justify-content:space-between;width:100%;padding:0 28px;min-height:58px;background:none;border:0;color:inherit;text-align:left;cursor:pointer;font:500 19px var(--tx);letter-spacing:.14em}
+.drawer li>a:hover,.drawer li>button:hover{background:rgba(74,38,22,.06)}
+.drawer .chev{width:18px;height:18px;flex:none;transition:transform .4s var(--ease)}
+.drawer li.x .chev{transform:rotate(90deg)}
+.drawer .sub{max-height:0;overflow:hidden;transition:max-height .45s var(--ease);background:rgba(74,38,22,.05)}
+.drawer .sub a{display:block;padding:14px 28px 14px 44px;font:400 16px var(--tx);letter-spacing:.1em;min-height:0}
+.drawer .sub a:hover{color:var(--ink);background:rgba(74,38,22,.06)}
+.dh.sec{min-height:54px;font-size:14px;margin-top:10px}
+.dft{margin-top:auto;flex:none}
+.dft .dh{min-height:54px;font-size:14px}
+.dft a{display:flex;align-items:center;gap:12px;padding:14px 28px;font:500 17px var(--tx);letter-spacing:.1em}
+.dft svg{width:22px;height:22px;flex:none}
+@media(min-width:901px){.drawer,.scrim{display:none}}
+body.lock{overflow:hidden}
+/* hero */
+.hero{position:relative;height:100vh;height:100svh;min-height:620px;border-radius:0 0 56px 56px;overflow:hidden;background:var(--ink);display:grid;grid-template-columns:repeat(4,1fr)}
+.hero .col{overflow:hidden;clip-path:inset(100% 0 0 0);animation:rise 1.4s var(--ease) forwards}
+.hero .col:nth-child(2){animation-delay:.12s}.hero .col:nth-child(3){animation-delay:.24s}.hero .col:nth-child(4){animation-delay:.36s}
+.hero .col img{width:100%;height:100%;object-fit:cover;animation:kb 22s ease-in-out infinite alternate}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,17,11,.45),rgba(30,17,11,.05) 35%,rgba(30,17,11,.7))}
+@keyframes rise{to{clip-path:inset(0)}}
+@keyframes kb{to{transform:scale(1.12)}}
+.hero h1{position:absolute;z-index:2;left:48px;bottom:56px;right:200px;color:#fff;font-size:clamp(36px,6.4vw,118px)}
+.hero h1 span{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 i{display:block;font-style:normal;transform:translateY(110%);animation:up 1.2s .5s var(--ease) forwards}
+.hero h1 span+span i{animation-delay:.65s}
+@keyframes up{to{transform:none}}
+.hero .round{position:absolute;z-index:3;right:44px;bottom:56px;opacity:0;animation:fade 1s 1.3s forwards}
+@keyframes fade{to{opacity:1}}
+/* intro */
+.intro{display:grid;grid-template-columns:1.2fr .8fr;gap:70px;padding:130px 32px 40px;align-items:start}
+.intro h2{font-size:clamp(40px,6vw,96px)}
+.intro p{font-size:clamp(20px,1.9vw,28px);line-height:1.35}
+.intro svg.dd{margin:30px 0 0 90px}
+.best{position:relative;padding:60px 0 130px;overflow:hidden}
+.bt{position:absolute;inset:0;z-index:0;transform:rotate(-8deg) scale(1.2);display:flex;flex-direction:column;justify-content:center;gap:8px;font:400 clamp(90px,13vw,200px)/.9 var(--hv);text-transform:uppercase;white-space:nowrap;opacity:.95}
+.bt div{display:flex;width:max-content;animation:slide 40s linear infinite}
+.bt div:nth-child(2){animation-direction:reverse;color:var(--cocoa)}
+.bt div span{padding-right:.4em;color:transparent;-webkit-text-stroke:2px var(--cocoa)}
+.bt div:nth-child(2) span{color:var(--cocoa);-webkit-text-stroke:0}
+@keyframes slide{to{transform:translateX(-50%)}}
+.arches{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.arch{background:var(--paper);border:3px solid var(--cocoa);border-radius:999px 999px 28px 28px;padding:56px 36px 34px}
+.arch .ph{aspect-ratio:1;border-radius:36px;overflow:hidden;background:#ddd}
+.arch img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.arch:hover img{transform:scale(1.07)}
+.arch h3{font-size:34px;margin:26px 0 6px;color:var(--ink)}
+.arch small{font-size:14px;color:var(--mute)}
+.arch .pr{display:flex;align-items:center;justify-content:space-between;margin:12px 0 18px;font:400 30px var(--hv);color:var(--ink)}
+.arch .pill{display:block;text-align:center}
+/* strip */
+.strip{padding:90px 0 120px;overflow:hidden}
+.strip h2{text-align:center;font-size:clamp(34px,5vw,76px);margin-bottom:60px;padding:0 24px}
+.st{display:flex;align-items:center;gap:36px;width:max-content;animation:slide 70s linear infinite}
+.strip:hover .st{animation-play-state:paused}
+.st img{width:290px;object-fit:cover;border-radius:999px 999px 30px 30px}
+.st img:nth-of-type(odd){height:480px}.st img:nth-of-type(even){height:380px}
+/* menu */
+.menu{padding:0 20px 120px}
+.panel{background:var(--cocoa);color:var(--paper);border-radius:48px;padding:80px 56px;max-width:1380px;margin:0 auto}
+.panel .tag{font:700 14px var(--tx);text-transform:uppercase;letter-spacing:.14em;color:var(--acc);margin-bottom:14px}
+.panel h2{font-size:clamp(44px,6vw,92px);margin-bottom:18px}
+.msub{max-width:640px;opacity:.85;margin-bottom:34px}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:38px}
+.tabs button{border:2px solid var(--paper);background:none;color:var(--paper);font:700 14px var(--tx);text-transform:uppercase;padding:11px 20px;border-radius:999px;cursor:pointer;transition:background .3s,color .3s}
+.tabs button small{font:500 12px var(--tx);opacity:.7;margin-left:6px}
+.tabs button.on{background:var(--acc);border-color:var(--acc);color:var(--ink)}
+.mg{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+.mc{min-width:0;overflow-wrap:anywhere;background:var(--paper);color:var(--cocoa);border-radius:28px;padding:12px 12px 20px;display:flex;flex-direction:column;animation:fade .6s var(--ease) both}
+.mc .im{position:relative;aspect-ratio:4/5;border-radius:20px;overflow:hidden;background:#e7dcc8}
+.mc .im img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.mc:hover .im img{transform:scale(1.06)}
+.mc.soon .im img{filter:saturate(.75)}
+.mc .bd{position:absolute;left:10px;top:10px;display:flex;gap:6px;flex-wrap:wrap}
+.mc .bd span{background:var(--ink);color:var(--paper);font:700 11px var(--tx);text-transform:uppercase;letter-spacing:.1em;padding:6px 10px;border-radius:999px}
+.mc .bd .soon{background:var(--acc);color:var(--ink)}.mc .bd .veg{background:#2f6b3a}
+.mc h3{font-size:22px;margin:16px 6px 8px;color:var(--ink)}
+.mc .pr{margin:0 6px}
+.mc .pr .one{font:400 30px/1 var(--hv);display:block}.mc .pr .one i{font:700 13px var(--tx);font-style:normal;text-transform:uppercase;letter-spacing:.08em;margin-right:8px;opacity:.7}
+.mc .pr div{display:flex;justify-content:space-between;gap:10px;border-top:1px solid rgba(74,38,22,.15);padding:6px 0;font-size:15px}
+.mc .pr div b{font:400 20px var(--hv)}
+.mc .ds{margin:10px 6px 0;font-size:14px;line-height:1.45;opacity:.85}
+.mc .ch{display:flex;flex-wrap:wrap;gap:6px;margin:10px 6px 0}
+.mc .ch span{border:1.5px solid rgba(74,38,22,.3);border-radius:999px;font-size:12px;padding:3px 9px}
+.mc .sp{flex:1}
+.mc .pill{margin:16px 6px 0;text-align:center;padding:12px 18px;font-size:14px}
+.mc .pill.off{background:rgba(74,38,22,.12);color:var(--cocoa);pointer-events:none}
+/* why */
+.why{padding:0 0 120px}
+.why h2{font-size:clamp(34px,5vw,76px);margin-bottom:50px}
+.wt{display:flex;gap:22px;overflow-x:auto;scrollbar-width:none;padding:0 32px 4px;max-width:1320px;margin:0 auto}
+.wt::-webkit-scrollbar{display:none}
+.wc{flex:1 0 min(290px,80vw);min-height:360px;border-radius:44px;padding:44px 38px;background:var(--cocoa);color:var(--paper);display:flex;flex-direction:column;justify-content:space-between}
+.wc:nth-child(even){background:var(--ink)}
+.wc b{font:400 64px var(--hv);color:var(--acc)}
+.wc h3{font-size:30px;margin-bottom:10px}
+.wc p{opacity:.85;font-size:17px}
+/* celebrate */
+.cel{text-align:center;padding:30px 24px 130px}
+.fig{position:relative;width:min(560px,92vw);margin:0 auto}
+.fig svg{display:block;width:100%;overflow:visible}
+.fig text{font:400 64px var(--hv);fill:var(--ink);letter-spacing:-1px}
+.fig .im{position:absolute;left:17.8%;top:19%;width:64.3%;height:72%;border-radius:999px 999px 0 0;overflow:hidden}
+.fig .im img{width:100%;height:100%;object-fit:cover}
+.fig .round{position:absolute;left:50%;bottom:-40px;margin-left:-75px;transform:rotate(-12deg);border:8px solid var(--paper)}
+.cel p{max-width:620px;margin:86px auto 0;font-size:21px}
+.steps{display:flex;justify-content:center;gap:clamp(18px,5vw,50px);flex-wrap:wrap;margin-top:44px;font:700 17px var(--tx);text-transform:uppercase}
+.steps span b{display:block;font:400 40px var(--hv);color:var(--acc)}
+/* cta */
+.cta{background:var(--cocoa);color:var(--paper);border-radius:56px;max-width:1100px;margin:0 auto 120px;padding:90px 40px;text-align:center;position:relative}
+.cta h2{font-size:clamp(40px,6vw,88px);margin-bottom:26px}
+.cta p{max-width:520px;margin:0 auto 34px;opacity:.85}
+.cta svg.dd{position:absolute;color:var(--ink);fill:var(--acc);width:90px;height:90px}
+.ord{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;max-width:1180px;padding:80px 56px;text-align:left;align-items:start}
+.ord .tag{font:700 14px var(--tx);text-transform:uppercase;letter-spacing:.14em;color:var(--acc);margin-bottom:16px}
+.ord h2{text-align:left;font-size:clamp(40px,5vw,72px);margin-bottom:22px}
+.ord .ol>p{margin:0 0 30px;max-width:420px}
+.wa{display:inline-flex;align-items:center;gap:12px;padding:16px 28px;border-radius:999px;background:#25D366;color:#0b2a17;font:700 16px var(--tx);text-transform:uppercase;transition:transform .4s var(--ease)}
+.wa:hover{transform:translateY(-3px)}.wa svg{width:26px;height:26px}
+.ord .num{margin:20px 0 0;font-size:16px}.ord .num a{text-decoration:underline}
+.of{display:grid;gap:16px}
+.of label{display:grid;gap:7px;font:700 13px var(--tx);text-transform:uppercase;letter-spacing:.1em}
+.of input,.of select,.of textarea{width:100%;background:rgba(247,243,234,.08);border:2px solid rgba(247,243,234,.3);border-radius:16px;color:var(--paper);padding:14px 16px;font:400 17px var(--tx);text-transform:none;letter-spacing:0;color-scheme:dark;transition:border-color .3s}
+.of input:focus,.of select:focus,.of textarea:focus{outline:0;border-color:var(--acc)}
+.of select option,.of select optgroup{background:var(--ink);color:var(--paper)}
+.of ::placeholder{color:rgba(247,243,234,.45)}
+.of .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.of .chk{display:flex;align-items:center;gap:12px;text-transform:none;letter-spacing:0;font:400 17px var(--tx);cursor:pointer}
+.of .chk input{width:22px;height:22px;accent-color:var(--acc);flex:none;padding:0}
+.of .tot{font:400 22px var(--hv);color:var(--acc);min-height:28px}
+.of .pill{border:0;cursor:pointer;justify-self:start;font-size:16px}
+.how{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;padding:0 32px 110px;align-items:start;max-width:1320px;margin:0 auto}
+.how h2{font-size:clamp(40px,5.4vw,80px);margin:14px 0 22px}
+.how .tag,.dl .tag{font:700 14px var(--tx);text-transform:uppercase;letter-spacing:.14em;color:#A8651F}
+.how .lead{max-width:400px;margin-bottom:28px}
+.how .stk{position:sticky;top:120px}
+.hs{list-style:none;padding:0}
+.hs li{display:flex;gap:24px;align-items:flex-start;padding:26px 0;border-bottom:1px solid rgba(74,38,22,.2)}
+.hs li:first-child{border-top:1px solid rgba(74,38,22,.2)}
+.hs{counter-reset:s}
+.hs li:before{counter-increment:s;content:counter(s);flex:none;width:58px;height:58px;border-radius:50%;background:var(--cocoa);color:var(--paper);display:grid;place-items:center;font:400 26px var(--hv);box-shadow:0 0 0 4px var(--paper),0 0 0 6px #C98A45}
+.hs p{font-size:19px;line-height:1.45}.hs small{display:block;margin-top:6px;font-size:15px;opacity:.75}
+.enjoy{font:400 clamp(28px,3.4vw,44px)/1 var(--hv);text-transform:uppercase;margin-top:34px}
+.dl{padding:0 32px 120px;max-width:1320px;margin:0 auto}
+.dl h2{font-size:clamp(36px,5vw,76px);margin:14px 0 44px}
+.dg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.dc{border:3px solid var(--cocoa);border-radius:36px;padding:38px 32px;background:var(--paper)}
+.dc em{display:block;font:400 clamp(36px,4vw,58px)/1 var(--hv);font-style:normal;text-transform:uppercase;color:var(--cocoa);margin-bottom:14px}
+.dc h3{font-size:26px;margin-bottom:12px}
+.dc p{font-size:17px;line-height:1.5}.dc p+p{margin-top:10px;opacity:.8;font-size:15px}
+.cta .wbtn{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.cta .tag{font:700 14px var(--tx);text-transform:uppercase;letter-spacing:.14em;color:var(--acc);margin-bottom:16px}
+.cta .ghost{display:inline-block;padding:15px 30px;border-radius:999px;border:2px solid var(--paper);font:700 16px var(--tx);text-transform:uppercase;transition:background .3s,color .3s}
+.cta .ghost:hover{background:var(--paper);color:var(--cocoa)}
+.arc{position:relative;aspect-ratio:4/5;border-radius:999px 999px 32px 32px;overflow:hidden;background:var(--ink);max-width:340px;margin-top:38px}
+.arc video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.dp{aspect-ratio:16/10;border-radius:24px;overflow:hidden;margin-bottom:24px;background:#ddd}
+.dp img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.dc:hover .dp img{transform:scale(1.06)}
+.wph{display:flex;justify-content:center;gap:16px;margin-bottom:38px}
+.wph img{width:clamp(90px,16vw,170px);aspect-ratio:3/4;object-fit:cover;border-radius:999px 999px 22px 22px}
+.wph img:nth-child(2){margin-top:26px}
+.ord .arc{margin-top:40px}
+/* reels */
+.reels{padding:0 0 130px;overflow:hidden}
+.rh{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:44px}
+.rh h2{min-width:0}
+.rh h2{font-size:clamp(36px,5.4vw,80px)}
+.ar{display:flex;gap:10px}
+.ar button{width:56px;height:56px;border-radius:50%;border:3px solid var(--cocoa);background:none;color:var(--cocoa);font-size:22px;cursor:pointer;transition:background .3s,color .3s}
+.ar button:hover{background:var(--cocoa);color:var(--paper)}
+.rt{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 32px 6px}
+.rt::-webkit-scrollbar{display:none}
+.reel{flex:0 0 clamp(220px,22vw,300px);aspect-ratio:9/16;border-radius:32px;overflow:hidden;position:relative;scroll-snap-align:start;background:var(--ink);cursor:pointer}
+.reel video,.reel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.reel .mu{position:absolute;right:14px;bottom:14px;width:40px;height:40px;border-radius:50%;background:rgba(30,17,11,.65);display:grid;place-items:center;font-size:15px}
+.sl{display:flex!important;align-items:center;gap:12px;padding:4px 0}
+.sl svg,.soc svg{width:24px;height:24px;flex:none}
+.soc{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.soc a{display:inline-flex;align-items:center;gap:10px;padding:11px 20px;border:2px solid var(--cocoa);border-radius:999px;font:700 14px var(--tx);text-transform:uppercase;transition:background .3s,color .3s}
+.soc a:hover{background:var(--cocoa);color:var(--paper)}
+/* footer */
+footer{background:var(--cocoa);color:var(--paper);padding:90px 0 30px;border-radius:56px 56px 0 0;overflow:hidden}
+.fg{display:grid;grid-template-columns:1.2fr .8fr 1fr 1fr;gap:40px}
+footer h3{font-size:34px;margin-bottom:20px}
+footer p,footer a{font-size:20px;display:block;line-height:1.5}
+footer a:hover{color:var(--acc)}
+footer .logo{width:96px;height:96px;border-radius:50%;object-fit:cover;margin-bottom:20px}
+.wmw{container-type:inline-size;overflow:hidden;margin:70px 0 20px}
+.wm{font:400 9vw/1 var(--hv);font-size:10.2cqw;text-transform:uppercase;letter-spacing:-.03em;white-space:nowrap;color:var(--paper);text-align:center}
+.fine{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:14px;opacity:.7}
+.rv{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+@media(max-width:1180px){nav .tel{display:none}nav ul{gap:28px;font-size:15px}.brand{font-size:22px}nav .wrap{gap:24px;padding:0 28px}.panel{padding:64px 44px;gap:44px}}
+@media(max-width:1180px){.mg{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:900px){
+.how{grid-template-columns:1fr;gap:34px;padding:0 20px 80px}.how .stk{position:static}.dl{padding:0 20px 90px}.dg{grid-template-columns:1fr}.hs li{gap:16px}.hs li:before{width:48px;height:48px;font-size:22px}.hs p{font-size:17px}
+nav .wrap{padding:0 20px;gap:16px;height:64px}nav ul{display:none}.brand{margin-right:auto}.burger{display:block}
+.hero{grid-template-columns:repeat(2,1fr);border-radius:0 0 32px 32px}.hero .col:nth-child(n+3){display:none}
+.hero h1{left:20px;right:20px;bottom:150px}.hero .round{right:20px;bottom:28px;width:110px;height:110px;font-size:14px}
+.intro,.panel,.fg{grid-template-columns:1fr;gap:34px}.intro{padding-top:90px}.intro svg.dd{margin-left:0}
+.arches{grid-template-columns:1fr;max-width:420px;margin:0 auto}
+.panel{padding:46px 20px;border-radius:32px}.mg{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.mc{padding:8px 8px 16px;border-radius:22px}.mc .im{border-radius:16px}.mc h3{font-size:17px;margin:12px 4px 6px}.mc .pr{margin:0 4px}.mc .pr .one{font-size:24px}.mc .ds{font-size:13px;margin:8px 4px 0}.mc .ch{margin:8px 4px 0}.mc .ch span{font-size:11px}.mc .pill{margin:14px 4px 0;padding:10px 12px;font-size:13px}.tabs button{padding:9px 14px;font-size:12px}
+.st img{width:210px}.st img:nth-of-type(odd){height:340px}.st img:nth-of-type(even){height:270px}
+.wrap{padding:0 20px}.wt,.rt{padding:0 20px}
+.cta{border-radius:32px;margin:0 20px 90px;padding:70px 24px}.ord{grid-template-columns:1fr;gap:36px;padding:48px 24px}.of .two{grid-template-columns:1fr}.cta svg.dd{display:none}
+footer{border-radius:32px 32px 0 0}.fig text{font-size:56px}
+.fg>*{min-width:0}.steps{font-size:13px}.steps span b{font-size:32px}.cel p{font-size:18px;margin-top:70px}.intro{padding:90px 20px 20px}.hero h1{bottom:140px}
+}
+@media(max-width:380px){.wrap,.intro{padding-left:16px;padding-right:16px}.wt,.rt{padding:0 16px}.panel{padding:40px 20px}.arch{padding:44px 22px 26px}.cta{margin:0 12px 70px}.round{width:110px;height:110px;font-size:14px}.ar button{width:48px;height:48px}.tabs button{padding:10px 16px;font-size:13px}}
+@media(max-height:520px) and (orientation:landscape){.hero{min-height:480px}.hero h1{font-size:clamp(28px,5vw,60px);bottom:30px}.hero .round{width:96px;height:96px;bottom:24px;font-size:13px}}
+@media(min-width:620px) and (max-width:900px){.mg{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:16px}}
+@media(max-width:340px){.mg{grid-template-columns:minmax(0,1fr)}}
+@media(hover:none){.pill:hover,.wa:hover,.round:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01s!important;animation-delay:0s!important;transition-duration:.01s!important}.rv{opacity:1;transform:none}.bt div,.st{animation:none}}
+
+[hidden]{display:none!important}
+.mc .pill.add{border:0;cursor:pointer;width:calc(100% - 12px)}
+.mc .opt{margin:14px 6px 0;width:calc(100% - 12px);padding:10px 12px;border:2px solid rgba(74,38,22,.3);border-radius:14px;background:var(--paper);color:var(--cocoa);font:600 14px var(--tx)}
+.mc .opt+.pill{margin-top:10px}
+.kb{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:90;display:flex;align-items:center;gap:10px;padding:13px 18px;border:0;border-radius:999px;background:var(--acc);color:var(--ink);font:700 15px var(--tx);text-transform:uppercase;cursor:pointer;box-shadow:0 8px 24px rgba(30,17,11,.35)}
+.kb svg{width:22px;height:22px}
+.kb b{background:var(--ink);color:var(--paper);border-radius:999px;min-width:26px;height:26px;display:grid;place-items:center;font-size:13px;padding:0 7px}
+.kv{position:fixed;inset:0;background:rgba(30,17,11,.55);z-index:300;opacity:0;pointer-events:none;transition:opacity .3s}
+.kv.o{opacity:1;pointer-events:auto}
+.kd{position:fixed;top:0;right:0;width:min(440px,100%);height:100vh;height:100dvh;background:var(--paper);color:var(--cocoa);z-index:310;display:flex;flex-direction:column;transform:translateX(100%);visibility:hidden;transition:transform .4s var(--ease),visibility 0s .4s}
+.kd.o{transform:none;visibility:visible;transition:transform .4s var(--ease),visibility 0s}
+.kh{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid rgba(74,38,22,.2)}
+.kh h2{font-size:28px}
+.kh button{background:none;border:0;color:inherit;font-size:32px;line-height:1;cursor:pointer;width:44px;height:44px;margin-right:-10px}
+.kbd{flex:1;overflow-y:auto;padding:6px 22px 30px;-webkit-overflow-scrolling:touch}
+.kd ul{list-style:none;padding:0}
+.kl{padding:16px 0;border-bottom:1px solid rgba(74,38,22,.15)}
+.kt{display:flex;justify-content:space-between;gap:12px}
+.kt b{display:block;font:400 18px/1.1 var(--hv);text-transform:uppercase}
+.kt small{font-size:13px;opacity:.75}
+.kp{font:400 18px var(--hv);white-space:nowrap}
+.kq{display:flex;justify-content:space-between;align-items:center;margin:10px 0}
+.ks{display:flex;align-items:center;gap:4px;border:2px solid var(--cocoa);border-radius:999px}
+.ks button{width:38px;height:38px;border:0;background:none;color:inherit;font-size:22px;cursor:pointer}
+.ks span{min-width:26px;text-align:center;font-weight:700}
+.kr{background:none;border:0;color:var(--mute);text-decoration:underline;font:500 14px var(--tx);cursor:pointer;padding:8px 0}
+.kd input,.kd select,.kd textarea{width:100%;background:#fff;border:2px solid rgba(74,38,22,.25);border-radius:14px;color:var(--cocoa);padding:12px 14px;font:400 16px var(--tx)}
+.kd input:focus,.kd select:focus,.kd textarea:focus{outline:0;border-color:var(--cocoa)}
+.kd form{display:grid;gap:12px;margin-top:20px}
+.kd label{display:grid;gap:5px;font:700 12px var(--tx);text-transform:uppercase;letter-spacing:.08em}
+.kd .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.kt2{font:400 22px var(--hv);text-transform:uppercase}
+.kw{color:#a3261a;font-size:14px;min-height:0}
+.kd .wa{width:100%;justify-content:center;border:0;cursor:pointer}
+.kd .clr{background:none;border:0;color:var(--mute);text-decoration:underline;cursor:pointer;font:500 14px var(--tx);justify-self:center}
+.ce{padding:30px 0;opacity:.8}
+@media(max-width:600px){.kd .two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="cup" viewBox="0 0 64 64"><g stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M15 33l5 25h24l5-25z"/><path d="M26 36l1 20M32 36v20M38 36l-1 20" fill="none"/><path d="M12 33c-2-9 9-11 12-17 3-7 13-7 16 0 3 6 14 8 12 17z"/><circle cx="32" cy="9" r="3.5" fill="#E04B3F"/></g></symbol>
+<symbol id="cook" viewBox="0 0 64 64"><g stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M32 6a26 26 0 1 0 26 26c-6 0-10-4-10-10 0-6-6-10-10-10-4-2-6-4-6-6z"/><circle cx="22" cy="28" r="3" fill="currentColor"/><circle cx="36" cy="40" r="3" fill="currentColor"/><circle cx="24" cy="46" r="2.5" fill="currentColor"/><circle cx="44" cy="30" r="2.5" fill="currentColor"/></g></symbol>
+</defs></svg>
+
+<nav id="nav"><div class="wrap">
+<a class="brand" href="#top">Cravealicious</a>
+<ul><li><a href="#menu">Menu</a></li><li><a href="#how">How to order</a></li><li><a href="#wholesale">Wholesale</a></li><li><a href="#reels">Reels</a></li><li><a href="#contact">Contact</a></li></ul>
+<a class="tel" href="tel:07999660309">07999 660309</a>
+<button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+</div></nav>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="mnav" aria-label="Menu">
+<div class="dh"><span>Categories</span><button type="button" id="dclose" aria-label="Close menu">&times;</button></div>
+<ul>
+<li><button type="button" class="cat" aria-expanded="false">Cupcakes<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="sub"><a href="#menu" data-cat="Cupcakes">See prices</a><a href="https://wa.me/447999660309?text=Hi%20Cravealicious%2C%20I%27d%20like%20to%20order%20cupcakes" target="_blank" rel="noopener">Order cupcakes</a></div></li>
+<li><button type="button" class="cat" aria-expanded="false">Brownies<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="sub"><a href="#menu" data-cat="Brownies">See prices</a><a href="https://wa.me/447999660309?text=Hi%20Cravealicious%2C%20I%27d%20like%20to%20order%20brownies" target="_blank" rel="noopener">Order brownies</a></div></li>
+<li><button type="button" class="cat" aria-expanded="false">Cakes<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="sub"><a href="#menu" data-cat="Cakes">See prices</a><a href="https://wa.me/447999660309?text=Hi%20Cravealicious%2C%20I%27d%20like%20to%20order%20a%20cake" target="_blank" rel="noopener">Order cakes</a></div></li>
+</ul>
+<div class="dh sec">Explore</div>
+<ul>
+<li><a href="#how">How to order</a></li>
+<li><a href="#delivery">Delivery &amp; collection</a></li>
+<li><a href="#order">Custom orders</a></li>
+<li><a href="#wholesale">Wholesale</a></li>
+<li><a href="#whatsapp">Order on WhatsApp</a></li>
+<li><a href="#reels">Reels</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<div class="dft"><div class="dh">Contact us</div>
+<a href="tel:07999660309"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>07999 660309</a>
+<a href="https://www.instagram.com/cravealicious1/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.3" fill="currentColor"/></svg>Instagram</a>
+<a href="https://www.tiktok.com/@cravealicious" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.5 3c.3 2.3 1.7 3.8 4 4v3.2c-1.5 0-2.9-.5-4-1.3v6.6a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.3a2.4 2.4 0 1 0 1.5 2.2V3h3.2z"/></svg>TikTok</a></div>
+</aside>
+
+<header class="hero" id="top">
+<div class="col"><img src="assets/img/hero-1.jpg" alt="Vanilla cream cake with chocolate shavings"></div>
+<div class="col"><img src="assets/img/hero-2.jpg" alt="Birthday cake and cupcakes in a box"></div>
+<div class="col"><img src="assets/img/hero-3.jpg" alt="Box of twelve cupcakes topped with raspberries"></div>
+<div class="col"><img src="assets/img/hero-4.jpg" alt="Box of loaded brownies"></div>
+<h1><span><i>A little crunch,</i></span><span><i>a lot of craving.</i></span></h1>
+<a class="round" href="https://wa.me/447999660309?text=Hi%20Cravealicious%2C%20I%27d%20like%20to%20place%20an%20order" target="_blank" rel="noopener">Order<br>now</a>
+</header>
+
+<section class="wrap intro">
+<h2 class="rv">Good sweets should feel like a treat and taste like you meant it.</h2>
+<div class="rv"><p>Cravealicious makes homemade halal brownies, cakes, cupcakes, desserts and drinks in Bradford. Grab a box for the week, or let us bake for your next celebration. Order for collection or delivery.</p><svg class="dd"><use href="#cup"/></svg></div>
+</section>
+
+<section class="best"><div class="bt" aria-hidden="true"><div id="b1"></div><div id="b2"></div></div>
+<div class="wrap arches">
+<article class="arch rv"><div class="ph"><img src="assets/img/cupcakes-raspberry.jpg" alt="Cupcakes with raspberries" loading="lazy"></div><h3>Cupcakes</h3><small>Box of 4, any flavour</small><div class="pr"><span>£4</span></div><a class="pill" href="https://wa.me/447999660309?text=Hi%20Cravealicious%2C%20I%27d%20like%20a%20box%20of%20cupcakes" target="_blank" rel="noopener">Order</a></article>
+<article class="arch rv"><div class="ph"><img src="assets/img/brownies-eid.jpg" alt="Loaded brownie box" loading="lazy"></div><h3>Brownies</h3><small>Box of 4, loaded</small><div class="pr"><span>£5</span></div><a class="pill" href="https://wa.me/447999660309?text=Hi%20Cravealicious%2C%20I%27d%20like%20a%20box%20of%20brownies" target="_blank" rel="noopener">Order</a></article>
+<article class="arch rv"><div class="ph"><img src="assets/img/cake-cream.jpg" alt="Cream cake" loading="lazy"></div><h3>Cakes</h3><small>Per slice</small><div class="pr"><span>£3</span></div><a class="pill" href="https://wa.me/447999660309?text=Hi%20Cravealicious%2C%20I%27d%20like%20some%20cake" target="_blank" rel="noopener">Order</a></article>
+</div></section>
+
+<section class="strip"><h2 class="rv">The best things in life are sweet</h2><div class="st" id="st"></div></section>
+
+<section class="menu" id="menu"><div class="panel">
+<p class="tag">The menu</p><h2>Our full menu</h2>
+<p class="msub">Everything is baked to order in Bradford. Tap Add to cart on anything you fancy, then send your whole order to us on WhatsApp. Bigger and custom orders are booked in advance.</p>
+<div class="tabs" id="tabs" role="tablist"></div>
+<div class="mg" id="mgrid"></div>
+</div></section>
+
+<section class="why"><div class="wrap"><h2 class="rv">Why people keep coming back</h2></div>
+<div class="wt">
+<div class="wc"><b>01</b><div><h3>Baked to order</h3><p>Nothing sits on a shelf. Your box is made fresh for your day.</p></div></div>
+<div class="wc"><b>02</b><div><h3>Loaded, not stingy</h3><p>Biscoff, Oreo, pistachio and more, piled on every brownie and cupcake.</p></div></div>
+<div class="wc"><b>03</b><div><h3>One simple price</h3><p>Every flavour and topping in a box costs the same. No surprises.</p></div></div>
+<div class="wc"><b>04</b><div><h3>Made for occasions</h3><p>Personalised boxes for birthdays, Eid, weddings and events.</p></div></div>
+</div></section>
+
+<section class="how" id="how">
+<div class="stk rv"><p class="tag">Simple as 1 to 6</p><h2>How to order</h2><p class="lead">Message us, pick a time slot, and we do the rest. Here is how every order works.</p>
+<a class="pill" href="https://wa.me/447999660309?text=Hi%20Cravealicious%2C%20I%27d%20like%20to%20place%20an%20order" target="_blank" rel="noopener">Start on WhatsApp</a>
+<div class="arc"><video class="av" data-src="assets/reels/reel-01.mp4" poster="assets/reels/reel-01.jpg" muted loop playsinline preload="none"></video></div></div>
+<div class="rv"><ol class="hs">
+<li><p><b>Message us your order.</b> WhatsApp, DM us on Instagram @cravealicious1, or call or text 07999 660309. Snapchat: cravealicious.</p></li>
+<li><p>Select a time slot for collection or delivery and confirm your order details.</p></li>
+<li><p>We confirm your order and prepare it to be ready within your selected time slot.</p></li>
+<li><p>Delivery orders are given a timeframe, and payment is taken in advance.</p></li>
+<li><p>Collection orders can be paid in advance or on collection.<small>Collection orders are made on arrival unless paid in advance.</small></p></li>
+<li><p>Cash or card accepted. Please have exact cash.</p></li>
+</ol><p class="enjoy">Enjoy your order!</p></div>
+</section>
+
+<section class="dl" id="delivery">
+<p class="tag rv">Delivery &amp; collection</p><h2 class="rv">Your door or ours</h2>
+<div class="dg">
+<article class="dc rv"><div class="dp"><img src="assets/img/cupcakes-navy.jpg" alt="Boxed cupcakes ready for delivery" loading="lazy"></div><em>Over £6</em><h3>Delivery</h3><p>Delivery is available on all orders over £6.</p><p>Free within a one mile radius. Deliveries beyond that carry an additional fee.</p></article>
+<article class="dc rv"><div class="dp"><img src="assets/img/brownies-tray.jpg" alt="Brownie tray ready for collection" loading="lazy"></div><em>BD5</em><h3>Collection</h3><p>In-person collection from our Bradford BD5 location.</p><p>Message us on WhatsApp on 07999 660309 for details.</p></article>
+<article class="dc rv"><div class="dp"><img src="assets/img/strawberries.jpg" alt="Chocolate strawberries box" loading="lazy"></div><em>Cash or card</em><h3>Payment</h3><p>Pay by cash or card. Please have exact cash.</p><p>Delivery is paid in advance. Collection can be paid in advance or on collection.</p></article>
+</div></section>
+
+<section class="cel" id="order">
+<div class="fig">
+<svg viewBox="0 0 560 640" aria-label="Celebrate with us"><path id="ap" d="M50 600V300A230 230 0 0 1 510 300V600" fill="none"/><text><textPath href="#ap" startOffset="50%" text-anchor="middle">CELEBRATE WITH US</textPath></text></svg>
+<div class="im"><img src="assets/img/cupcakes-red.jpg" alt="Cupcakes for a celebration" loading="lazy"></div>
+<a class="round" href="https://wa.me/447999660309?text=Hi%20Cravealicious%2C%20I%27d%20like%20a%20custom%20order" target="_blank" rel="noopener">Order</a>
+</div>
+<p class="rv">Birthdays, Eid, weddings or a work event. We personalise your box and bake in bulk. Bigger orders are booked in advance, so message us early.</p>
+<div class="steps rv"><span><b>01</b>Message us</span><span><b>02</b>We confirm</span><span><b>03</b>Collect or deliver</span></div>
+</section>
+
+<section class="cta rv" id="wholesale">
+<div class="wph"><img src="assets/img/brownies-tray.jpg" alt="Tray of brownies" loading="lazy"><img src="assets/img/brownies-congrats.jpg" alt="Box of loaded brownies" loading="lazy"><img src="assets/img/cupcakes-raspberry.jpg" alt="Box of twelve cupcakes" loading="lazy"></div>
+<p class="tag">For businesses</p><h2>Now offering wholesale</h2><p>Calling all businesses! Need a reliable dessert supplier? We provide the best quality at the cheapest prices. Partner with Cravealicious today.</p>
+<div class="wbtn"><a class="pill" href="https://wa.me/447999660309?text=Hi%20Cravealicious%2C%20I%27d%20like%20to%20ask%20about%20wholesale" target="_blank" rel="noopener">Wholesale enquiries</a><a class="ghost" href="tel:07999660309">Call 07999 660309</a></div></section>
+
+<section class="cta ord rv" id="whatsapp">
+<div class="ol">
+<p class="tag">Order direct</p>
+<h2>Order on WhatsApp</h2>
+<p>Pick what you fancy, tap send, and your order lands straight in our WhatsApp. We reply to confirm your price and pick-up time.</p>
+<a class="wa" href="https://wa.me/447999660309?text=Hi%20Cravealicious%2C%20I%27d%20like%20to%20place%20an%20order" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.2 1.4 2.5 1.5.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.8-.1 1.3z"/></svg>Chat on WhatsApp</a>
+<p class="num">or message <a href="https://wa.me/447999660309" target="_blank" rel="noopener">07999 660309</a></p>
+<div class="arc"><video class="av" data-src="assets/reels/reel-03.mp4" poster="assets/reels/reel-03.jpg" muted loop playsinline preload="none"></video></div>
+</div>
+<form class="of" id="of" autocomplete="off">
+<label>Your name<input id="f-name" required placeholder="Your name"></label>
+<label>What would you like?<select id="f-item"></select></label>
+<div class="two"><label>Quantity<input id="f-qty" type="number" min="1" max="50" value="1"></label><label>Date needed<input id="f-date" type="date"></label></div>
+<label>Collection or delivery<select id="f-mode"><option>Collection</option><option>Delivery (orders over £6)</option></select></label>
+<label class="chk"><input id="f-pers" type="checkbox"><span>Personalised box (+£1 per box)</span></label>
+<label>Notes<textarea id="f-note" rows="3" placeholder="Flavours, toppings, message on the box..."></textarea></label>
+<div class="tot" id="f-tot"></div>
+<button class="pill" type="submit">Send order on WhatsApp</button>
+</form>
+</section>
+
+<section class="reels" id="reels"><div class="wrap rh"><div><h2>Fresh from our kitchen</h2><div class="soc"><a href="https://www.instagram.com/cravealicious1/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.3" fill="currentColor"/></svg>Instagram</a><a href="https://www.tiktok.com/@cravealicious" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.5 3c.3 2.3 1.7 3.8 4 4v3.2c-1.5 0-2.9-.5-4-1.3v6.6a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.3a2.4 2.4 0 1 0 1.5 2.2V3h3.2z"/></svg>TikTok</a></div></div><div class="ar"><button id="prev" aria-label="Previous">&larr;</button><button id="next" aria-label="Next">&rarr;</button></div></div>
+<div class="rt" id="rt"></div></section>
+
+<footer id="contact"><div class="wrap">
+<div class="fg">
+<div><img class="logo" src="assets/img/logo.jpg" alt="Cravealicious logo"><h3>Cravealicious</h3><p>Fuel your day the crunchy way.</p></div>
+<div><h3>Order</h3><a href="tel:07999660309">07999 660309</a><a href="https://wa.me/447999660309" target="_blank" rel="noopener">WhatsApp</a></div>
+<div><h3>Follow us</h3><a class="sl" href="https://www.instagram.com/cravealicious1/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.3" fill="currentColor"/></svg>@cravealicious1</a><a class="sl" href="https://www.tiktok.com/@cravealicious" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.5 3c.3 2.3 1.7 3.8 4 4v3.2c-1.5 0-2.9-.5-4-1.3v6.6a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.3a2.4 2.4 0 1 0 1.5 2.2V3h3.2z"/></svg>@cravealicious</a></div>
+<div><h3>Find us</h3><p>Bradford BD5</p><p>Collection or delivery on orders over £6. Stall and event dates are on our socials.</p></div>
+</div>
+<div class="wmw"><div class="wm">Cravealicious</div></div>
+<div class="fine"><span>&copy; 2026 Cravealicious</span><span>Cash or card accepted</span></div>
+</div></footer>
+
+<button type="button" class="kb" id="kb" hidden aria-label="Open cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2L5 8z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M9 10V7a3 3 0 0 1 6 0v3" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>Cart<b id="kn">0</b></button>
+<div class="kv" id="kv"></div>
+<aside class="kd" id="kd" role="dialog" aria-modal="true" aria-label="Your cart" aria-hidden="true">
+<div class="kh"><h2>Your cart</h2><button type="button" id="kx" aria-label="Close cart">&times;</button></div>
+<div class="kbd"><ul id="kl"></ul>
+<form id="kf" autocomplete="off">
+<label>Your name<input id="k-name" required placeholder="Your name"></label>
+<div class="two"><label>Collection or delivery<select id="k-mode"><option>Collection</option><option>Delivery (orders over £6)</option></select></label><label>Date needed<input id="k-date" type="date"></label></div>
+<label>Extra notes<textarea id="k-note" rows="2" placeholder="Anything else we should know?"></textarea></label>
+<div class="kt2" id="k-tot"></div><p class="kw" id="k-warn"></p>
+<button class="wa" type="submit">Send order on WhatsApp</button>
+<button type="button" class="clr" id="k-clr">Clear cart</button>
+</form></div></aside>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const nav=$('#nav');addEventListener('scroll',()=>nav.classList.toggle('s',scrollY>innerHeight*.6),{passive:true});
+const bg=$('#burger'),mn=$('#mnav');function tog(o){nav.classList.toggle('o',o);mn.classList.toggle('o',o);$('#scrim').classList.toggle('o',o);document.body.classList.toggle('lock',o);bg.setAttribute('aria-expanded',o)}
+bg.onclick=()=>tog(!mn.classList.contains('o'));$('#dclose').onclick=()=>tog(false);$('#scrim').onclick=()=>tog(false);
+$$('#mnav a').forEach(a=>a.addEventListener('click',()=>{if(a.dataset.cat)setCat(a.dataset.cat);tog(false)}));
+$$('#mnav .cat').forEach(b=>b.addEventListener('click',()=>{const li=b.parentElement,open=!li.classList.contains('x');
+$$('#mnav li.x').forEach(o=>{o.classList.remove('x');o.querySelector('.sub').style.maxHeight=0;o.querySelector('.cat').setAttribute('aria-expanded','false')});
+if(open){li.classList.add('x');const s=li.querySelector('.sub');s.style.maxHeight=s.scrollHeight+'px';b.setAttribute('aria-expanded','true')}}));
+addEventListener('resize',()=>{if(innerWidth>900)tog(false)});addEventListener('keydown',e=>{if(e.key==='Escape')tog(false)});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+$$('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%3)*.12+'s';io.observe(el)});
+/* outline words */
+const w='<span>Bestsellers</span>'.repeat(6);$('#b1').innerHTML=w;$('#b2').innerHTML=w;
+/* strip */
+const m=['brownies-congrats','cupcakes-navy','strawberries','cake-bento','brownies-tray','cupcakes-blue','brownies-eid','cupcakes-peach'];
+const item=(n,i)=>`<img src="assets/img/${n}.jpg" alt="" loading="lazy"><svg class="dd"><use href="#${i%2?'cup':'cook'}"/></svg>`;
+const base=m.map(item).join('');$('#st').innerHTML=base+base;
+/* menu */
+const OFF='Any topper or writing on top is from £1.',PRE='Pre-order only. Message us on WhatsApp for date availability.';
+const TCO='Terry’s Chocolate Orange';
+const M=[
+[1,'Box of 4 brownies','Brownies',[['','£5']],OFF],
+[2,'Box of 6 brownies','Brownies',[['','£7']],OFF],
+[3,'Box of 9 brownies','Brownies',[['','£10']],OFF],
+[4,'Box of 12 brownies','Brownies',[['','£13']],OFF],
+[5,'Milkcakes','Milkcakes',[['','£3']],'Choose your topping.',['Oreo','Flake','Biscoff','Hazelnuts','Jammy Dodger','Pistachio','Kinder',TCO,'Original','Smarties']],
+[6,'Box of 4 cupcakes','Cupcakes',[['','£4']],OFF],
+[7,'Box of 6 cupcakes','Cupcakes',[['','£7']],OFF],
+[8,'Box of 12 cupcakes','Cupcakes',[['','£12']],OFF],
+[9,'Brownie gift platter','Brownies',[['','£18']],OFF],
+[10,'Bite size brownies','Brownies',[['','£18']],OFF],
+[11,'Biscuits','Desserts',[['Each','£1.50'],['10 or more','£1 each']],'Pre-order only.',[],['pre']],
+[12,'Milkcake platter','Milkcakes',[['','£15']],OFF],
+[13,'Bento cakes','Cakes',[['From','£15 / £20']],'Pre-order only.',[],['pre']],
+[14,'Bento cake gift box','Cakes',[['','£22']],OFF],
+[15,'Mehndi cupcakes','Cupcakes',[['','£15']],OFF],
+[16,'Matilda cake','Cakes',[['Cake','£4'],['With ice cream','£5']],''],
+[17,'Brownie tray','Brownies',[['Original','£4.50'],['With topping or fruit','£5']],''],
+[18,'Vegan brownie platter','Brownies',[['','£16']],OFF,[],['veg']],
+[19,'Brownie platter','Brownies',[['From','£13']],OFF],
+[20,'Kunafa milkcake','Milkcakes',[['','£4']],''],
+[21,'Cookie dough with ice cream','Desserts',[['','£5']],'Served with ice cream. Many more flavours to come.',['Ferrero Rocher','Kinder','Smarties','Oreo',TCO]],
+[22,'Carrot cake','Cakes',[['','£20']],'Whole cake.'],
+[23,'Chocolate strawberries','Desserts',[['Box of 9','£9'],['Box of 12','£12'],['Box of 15','£15']],'Pre-order only. 4 hours’ advance notice.',[],['pre']],
+[24,'Box of 12 cupcakes','Cupcakes',[['','£12']],OFF],
+[25,'Dessert shots','Desserts',[['From','£1 each']],''],
+[26,'Milkshakes','Drinks',[['Regular','£3.50'],['Large','£4']],'Choose your flavour.',['Ferrero Rocher','Strawberry (+£1)','Bubblegum','Oreo','Biscoff','Kinder','Pistachio','Flake','Original','Chocolate','Create your own (+£1)']],
+[27,'Mocktails','Drinks',[['','£4']],'Choose your flavour.',['Strawberry','Mango','Blue lagoon','Mint','Apple','Mojito','Piña colada']],
+[28,'Matcha','Drinks',[['Regular','£3'],['Large','£4']],''],
+[29,'Falooda','Drinks',[['Regular','£3.50'],['Large','£4']],'With ice cream, add £1.'],
+[30,'Mango lassi','Drinks',[['','£3']],''],
+[31,'Cravealicious flurry','Desserts',[['','£2']],''],
+[32,'Small flurry','Desserts',[['','£1']],''],
+[33,'Matilda cake with custard','Cakes',[['','£4']],''],
+[34,'6 inch cake','Cakes',[['From','£27']],PRE,[],['pre']],
+[35,'6 inch heart cake','Cakes',[['From','£30']],PRE,[],['pre']],
+[36,'Sticky toffee pudding','Desserts',[],'',[],['soon']],
+[37,'Hot chocolate','Drinks',[],'',[],['soon']],
+[38,'Iced Spanish latte','Drinks',[],'',[],['soon']],
+[39,'8 inch heart cake','Cakes',[['From','£40']],PRE,[],['pre']],
+[40,'Carrot cake slices','Cakes',[['Per slice','£3']],''],
+[41,'8 inch cake','Cakes',[['From','£40']],PRE,[],['pre']],
+[42,'10 inch cake','Cakes',[['From','£45']],PRE,[],['pre']],
+[43,'Doughnuts','Desserts',[],'Served hot.',[],['soon']],
+[44,'8 inch square cake','Cakes',[['From','£45']],PRE,[],['pre']],
+[45,'Individual brownies','Brownies',[['','£1.50']],''],
+[46,'Red velvet cake slice','Cakes',[['Per slice','£3']],'']
+].map(a=>({id:a[0],n:a[1],c:a[2],pr:a[3],d:a[4]||'',ch:a[5]||[],tg:a[6]||[]}));
+const mimg=id=>'assets/menu/m'+String(id).padStart(2,'0')+'.jpg';
+const CATS=['All','Brownies','Cupcakes','Milkcakes','Cakes','Desserts','Drinks','Coming soon'];
+const inCat=(m,c)=>c==='All'||(c==='Coming soon'?m.tg.includes('soon'):m.c===c);
+$('#tabs').innerHTML=CATS.map(c=>`<button type="button" data-c="${c}">${c}<small>${M.filter(m=>inCat(m,c)).length}</small></button>`).join('');
+const waLink=n=>'https://wa.me/447999660309?text='+encodeURIComponent('Hi Cravealicious, I\u2019d like to order: '+n);
+function card(m,k){
+const soon=m.tg.includes('soon'),pr=m.pr.length===1?`<span class="one">${m.pr[0][0]?`<i>${m.pr[0][0]}</i>`:''}${m.pr[0][1]}</span>`:m.pr.map(p=>`<div><span>${p[0]}</span><b>${p[1]}</b></div>`).join('');
+const bd=(m.tg.includes('soon')?'<span class="soon">Coming soon</span>':'')+(m.tg.includes('pre')?'<span>Pre-order</span>':'')+(m.tg.includes('veg')?'<span class="veg">Vegan</span>':'');
+return `<article class="mc${soon?' soon':''}" style="animation-delay:${Math.min(k,12)*.04}s"><div class="im"><img src="${mimg(m.id)}" alt="${m.n}" loading="lazy" decoding="async"><div class="bd">${bd}</div></div><h3>${m.n}</h3>${pr?`<div class="pr">${pr}</div>`:''}${m.d?`<p class="ds">${m.d}</p>`:''}${m.ch.length?`<div class="ch">${m.ch.map(c=>`<span>${c}</span>`).join('')}</div>`:''}<span class="sp"></span>${soon?'<span class="pill off">Coming soon</span>':`${m.pr.length>1?`<select class="opt" aria-label="Choose option">${m.pr.map((p,i)=>`<option value="${i}">${p[0]} \u00b7 ${p[1]}</option>`).join('')}</select>`:''}<button type="button" class="pill add" data-id="${m.id}">Add to cart</button>`}</article>`}
+function setCat(c){$$('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.c===c));$('#mgrid').innerHTML=M.filter(m=>inCat(m,c)).map(card).join('')}
+$$('#tabs button').forEach(b=>b.onclick=()=>setCat(b.dataset.c));setCat('All');
+/* whatsapp order */
+const fi=$('#f-item'),num=t=>{const x=/£([0-9.]+)/.exec(t);return x?+x[1]:0};
+fi.innerHTML=CATS.slice(1,7).map(c=>`<optgroup label="${c}">${M.filter(m=>m.c===c&&!m.tg.includes('soon')).flatMap(m=>m.pr.map(p=>{const v=m.n+(p[0]&&p[0]!=='From'?' ('+p[0]+')':''),fr=p[0]==='From'||m.pr.length===1&&/\//.test(p[1]);return `<option data-p="${num(p[1])}" data-g="${c}"${fr?' data-from="1"':''} value="${v}">${v}: ${fr?'from ':''}${p[1].replace(/ each| \/.*/,'')}</option>`})).join('')}</optgroup>`).join('')+'<option value="custom" data-p="0">Something else / custom order</option>';
+const fd=$('#f-date');fd.min=new Date(Date.now()-new Date().getTimezoneOffset()*6e4).toISOString().slice(0,10);
+const money=n=>'£'+(Number.isInteger(n)?n:n.toFixed(2));
+function est(){const o=fi.selectedOptions[0],p=+o.dataset.p,q=Math.max(1,+$('#f-qty').value||1);if(!p){$('#f-tot').textContent='';return null}
+let t=p*q;if($('#f-pers').checked)t+=q;$('#f-tot').textContent='Estimated total: '+(o.dataset.from?'from ':'')+money(t);return t}
+['change','input'].forEach(ev=>$('#of').addEventListener(ev,est));est();
+$('#of').addEventListener('submit',e=>{e.preventDefault();
+const o=fi.selectedOptions[0],q=Math.max(1,+$('#f-qty').value||1),t=est(),n=$('#f-name').value.trim(),note=$('#f-note').value.trim();
+let m='Hi Cravealicious! \u{1F44B}\nI\u2019d like to order:\n';
+m+=o.value==='custom'?'\u2022 A custom order\n':`\u2022 ${q} x ${o.value} (${o.dataset.g})\n`;
+if($('#f-pers').checked)m+='\u2022 Personalised box\n';
+m+='Collection or delivery: '+$('#f-mode').value+'\n';
+if(fd.value)m+='Date needed: '+new Date(fd.value+'T12:00').toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'})+'\n';
+if(note)m+='Notes: '+note+'\n';
+if(t)m+=$('#f-tot').textContent+'\n';
+m+='Name: '+n;
+window.open('https://wa.me/447999660309?text='+encodeURIComponent(m),'_blank','noopener')});
+/* cart */
+const CK='crave-cart';let cart=[];
+try{cart=JSON.parse(localStorage.getItem(CK)||'[]').filter(x=>x&&x.k&&x.q>0)}catch(e){cart=[]}
+const save=()=>{try{localStorage.setItem(CK,JSON.stringify(cart))}catch(e){}};
+const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const kd=$('#kd'),kv=$('#kv'),kdate=$('#k-date');
+kdate.min=new Date(Date.now()-new Date().getTimezoneOffset()*6e4).toISOString().slice(0,10);
+function kopen(o){kd.classList.toggle('o',o);kv.classList.toggle('o',o);kd.setAttribute('aria-hidden',!o);document.body.classList.toggle('lock',o);if(o)$('#kx').focus()}
+function ktot(){let t=0,fr=false;cart.forEach(x=>{t+=x.p*x.q;if(x.f)fr=true});return{t,fr}}
+function draw(){
+const n=cart.reduce((a,x)=>a+x.q,0);$('#kn').textContent=n;$('#kb').hidden=!n;
+$('#kl').innerHTML=cart.length?cart.map((x,i)=>`<li class="kl"><div class="kt"><div><b>${esc(x.n)}</b><small>${x.o?esc(x.o)+' \u00b7 ':''}${x.p?(x.f?'from ':'')+money(x.p):'Price on request'}${x.pre?' \u00b7 pre-order':''}</small></div><span class="kp">${x.p?(x.f?'from ':'')+money(x.p*x.q):''}</span></div><div class="kq"><div class="ks"><button type="button" data-a="-" data-i="${i}" aria-label="Less">&minus;</button><span>${x.q}</span><button type="button" data-a="+" data-i="${i}" aria-label="More">+</button></div><button type="button" class="kr" data-a="x" data-i="${i}">Remove</button></div><input class="kn" data-i="${i}" maxlength="80" value="${esc(x.t)}" placeholder="Flavour, topper or message (optional)"></li>`).join(''):'<p class="ce">Your cart is empty. Tap Add to cart on anything from the menu.</p>';
+const {t,fr}=ktot();$('#k-tot').textContent=cart.length&&t?'Estimated total: '+(fr?'from ':'')+money(t):'';$('#k-warn').textContent='';
+if(!cart.length&&kd.classList.contains('o'))kopen(false)}
+$('#mgrid').addEventListener('click',e=>{const b=e.target.closest('.add');if(!b)return;
+const m=M.find(x=>x.id==+b.dataset.id),s=b.closest('.mc').querySelector('.opt'),i=s?+s.value:0,p=m.pr[i]||['',''],k=m.id+'-'+i,ex=cart.find(x=>x.k===k);
+if(ex)ex.q=Math.min(50,ex.q+1);else cart.push({k,n:m.n,o:m.pr.length>1&&p[0]!=='From'?p[0]:'',p:num(p[1]),f:p[0]==='From'||(m.pr.length===1&&/\//.test(p[1])),pre:m.tg.includes('pre'),q:1,t:''});
+save();draw();b.textContent='Added \u2713';setTimeout(()=>b.textContent='Add to cart',1000)});
+$('#kb').onclick=()=>kopen(true);$('#kx').onclick=$('#kv').onclick=()=>kopen(false);
+addEventListener('keydown',e=>{if(e.key==='Escape'&&kd.classList.contains('o'))kopen(false)});
+$('#kl').addEventListener('click',e=>{const b=e.target.closest('[data-a]');if(!b)return;const x=cart[+b.dataset.i],a=b.dataset.a;
+if(a==='+')x.q=Math.min(50,x.q+1);else if(a==='-')x.q--;else x.q=0;
+cart=cart.filter(y=>y.q>0);save();draw()});
+$('#kl').addEventListener('input',e=>{if(e.target.classList.contains('kn')){cart[+e.target.dataset.i].t=e.target.value;save()}});
+$('#k-clr').onclick=()=>{cart=[];save();draw()};
+$('#kf').addEventListener('submit',e=>{e.preventDefault();if(!cart.length)return;
+const {t,fr}=ktot(),mode=$('#k-mode').value;
+if(mode.startsWith('Delivery')&&!fr&&t&&t<6){$('#k-warn').textContent='Delivery is for orders over £6. Add more items or choose Collection.';return}
+let m='Hi Cravealicious! \u{1F44B}\nI\u2019d like to order:\n';
+cart.forEach(x=>{m+=`\u2022 ${x.q} x ${x.n}${x.o?' ('+x.o+')':''}${x.pre?' [pre-order]':''}${x.p?' \u2013 '+(x.f?'from ':'')+money(x.p*x.q):''}\n`;if(x.t)m+='   Note: '+x.t+'\n'});
+if(t)m+='\nEstimated total: '+(fr?'from ':'')+money(t)+'\n';
+m+='\nCollection or delivery: '+mode+'\n';
+if(kdate.value)m+='Date needed: '+new Date(kdate.value+'T12:00').toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'})+'\n';
+const nt=$('#k-note').value.trim();if(nt)m+='Notes: '+nt+'\n';
+m+='Name: '+$('#k-name').value.trim();
+window.open('https://wa.me/447999660309?text='+encodeURIComponent(m),'_blank','noopener')});
+draw();
+/* reels */
+const rt=$('#rt');
+rt.innerHTML=Array.from({length:14},(_,i)=>{const n=String(i+1).padStart(2,'0');return `<div class="reel"><img src="assets/reels/reel-${n}.jpg" alt="Cravealicious reel ${i+1}" loading="lazy"><video data-src="assets/reels/reel-${n}.mp4" muted loop playsinline preload="none"></video><span class="mu">&#x1F507;</span></div>`}).join('');
+const vio=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target.querySelector('video');
+if(e.isIntersecting){if(!v.src)v.src=v.dataset.src;if(!reduce)v.play().catch(()=>{})}else v.pause()}),{threshold:.6});
+$$('.reel').forEach(r=>{vio.observe(r);r.onclick=()=>{const v=r.querySelector('video');v.muted=!v.muted;r.querySelector('.mu').innerHTML=v.muted?'&#x1F507;':'&#x1F50A;';if(v.paused)v.play()}});
+const avo=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){if(!v.src)v.src=v.dataset.src;if(!reduce)v.play().catch(()=>{})}else v.pause()}),{threshold:.4});
+$$('.av').forEach(v=>avo.observe(v));
+const step=()=>$('.reel').offsetWidth+20;
+$('#prev').onclick=()=>rt.scrollBy({left:-step()*2,behavior:'smooth'});
+$('#next').onclick=()=>rt.scrollBy({left:step()*2,behavior:'smooth'});
+</script>
+</body>
+</html>

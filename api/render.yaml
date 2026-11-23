@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: amazon-scraper-api
+    env: docker
+    region: oregon
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: API_KEYS
+        generateValue: true
+      - key: CACHE_TTL
+        value: 3600
+      - key: MAX_BATCH
+        value: 5
+      - key: US_ZIP
+        value: 10001
+      - key: MAX_RETRIES
+        value: 2
+    healthCheckPath: /health
